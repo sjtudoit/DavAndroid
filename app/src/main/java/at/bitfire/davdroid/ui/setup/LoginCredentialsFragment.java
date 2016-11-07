@@ -172,13 +172,13 @@ public class LoginCredentialsFragment extends Fragment implements CompoundButton
             String userName = editUserName.getText().toString();
             if (userName.isEmpty()) {
                 editUserName.setError(getString(R.string.login_user_name_required));
-                valid = false;
+                valid = true;
             }
 
             String password = editUrlPassword.getText().toString();
             if (password.isEmpty()) {
                 editUrlPassword.setError(getString(R.string.login_password_required));
-                valid = false;
+                valid = true;
             }
 
             return valid ? new LoginCredentials(uri, userName, password) : null;
